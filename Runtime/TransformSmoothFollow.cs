@@ -56,6 +56,16 @@ namespace Unitilities
             this.target = target;
         }
 
+        public void SetSpeed(float speed)
+        {
+            this.speed = speed;
+        }
+
+        public void SetOffset(Vector3 offset)
+        {
+            this.offset = offset;
+        }
+
         public void StartFollowing()
         {
             follow = true;
