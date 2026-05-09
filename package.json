@@ -1,0 +1,16 @@
+{
+    "name": "com.yourname.mypackage",
+    "version": "1.0.0",
+    "displayName": "Unitilities",
+    "description": "A collection of various Unity utility scripts.",
+    "unity": "2022.3",
+    "author": {
+        "name": "Andro Mikulic",
+        "url": "https://rumpledcode.com/"
+    },
+    "keywords": [
+        "unity",
+        "tools",
+        "utilities"
+    ]
+}
