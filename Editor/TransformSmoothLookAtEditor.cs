@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using System.Reflection;
 
 namespace Unitilities
 {
@@ -7,35 +8,51 @@ namespace Unitilities
     [CanEditMultipleObjects]
     public class TransformSmoothLookAtEditor : Editor
     {
+        TransformSmoothLookAt lookAtTarget;
+        FieldInfo lookingDirectlyAtTargetField;
+
+        void OnEnable()
+        {
+            lookAtTarget = (TransformSmoothLookAt)target;
+
+            lookingDirectlyAtTargetField = typeof(TransformSmoothLookAt)
+                .GetField("lookingDirectlyAtTarget",
+                    BindingFlags.NonPublic | BindingFlags.Instance);
+        }
+
         public override void OnInspectorGUI()
         {
+            if (lookAtTarget == null)
+                lookAtTarget = (TransformSmoothLookAt)target;
+
             EditorGUILayout.HelpBox(
                 "Smoothly looks at a given transform.",
                 MessageType.Info);
 
             DrawDefaultInspector();
 
-            var t = (TransformSmoothLookAt)target;
-
             EditorGUILayout.Space();
-            EditorGUILayout.LabelField("State", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Readonly State", EditorStyles.boldLabel);
 
             EditorGUI.BeginDisabledGroup(true);
+
             EditorGUILayout.Toggle(
-                new GUIContent("Looking Directly At Target", "Is the object currently aligned with the target direction."),
-                GetLookingDirectlyAtTarget(t)
+                new GUIContent(
+                    "Looking Directly At Target",
+                    "Is the object currently aligned with the target direction."
+                ),
+                GetLookingDirectlyAtTarget(lookAtTarget)
             );
+
             EditorGUI.EndDisabledGroup();
         }
 
-        private bool GetLookingDirectlyAtTarget(TransformSmoothLookAt t)
+        bool GetLookingDirectlyAtTarget(TransformSmoothLookAt t)
         {
-            var field = typeof(TransformSmoothLookAt)
-                .GetField("lookingDirectlyAtTarget",
-                    System.Reflection.BindingFlags.NonPublic |
-                    System.Reflection.BindingFlags.Instance);
+            if (lookingDirectlyAtTargetField == null || t == null)
+                return false;
 
-            return (bool)field.GetValue(t);
+            return (bool)lookingDirectlyAtTargetField.GetValue(t);
         }
     }
 }

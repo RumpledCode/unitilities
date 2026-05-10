@@ -1,35 +1,58 @@
 using UnityEditor;
 using UnityEngine;
+using System.Reflection;
+
 namespace Unitilities
 {
     [CustomEditor(typeof(TransformSmoothFollow))]
     [CanEditMultipleObjects]
     public class TransformSmoothFollowEditor : Editor
     {
+        TransformSmoothFollow followTarget;
+        FieldInfo atTargetLocationField;
+
+        void OnEnable()
+        {
+            followTarget = (TransformSmoothFollow)target;
+
+            atTargetLocationField = typeof(TransformSmoothFollow)
+                .GetField("atTargetLocation",
+                    BindingFlags.NonPublic | BindingFlags.Instance);
+        }
+
         public override void OnInspectorGUI()
         {
+            if (followTarget == null)
+                followTarget = (TransformSmoothFollow)target;
+
             EditorGUILayout.HelpBox(
                 "Smoothly follows a given transform.",
                 MessageType.Info);
 
             DrawDefaultInspector();
-            var t = (TransformSmoothFollow)target;
+
             EditorGUILayout.Space();
-            EditorGUILayout.LabelField("State", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Readonly State", EditorStyles.boldLabel);
 
             EditorGUI.BeginDisabledGroup(true);
-            EditorGUILayout.Toggle(new GUIContent("At Target Location", "Is the target on location"), GetLookingDirectlyAtTarget(t));
+
+            EditorGUILayout.Toggle(
+                new GUIContent(
+                    "At Target Location",
+                    "Is the target currently at the desired follow position."
+                ),
+                GetAtTargetLocation(followTarget)
+            );
+
             EditorGUI.EndDisabledGroup();
         }
 
-        private bool GetLookingDirectlyAtTarget(TransformSmoothFollow t)
+        bool GetAtTargetLocation(TransformSmoothFollow t)
         {
-            var field = typeof(TransformSmoothFollow)
-                .GetField("atTargetLocation",
-                    System.Reflection.BindingFlags.NonPublic |
-                    System.Reflection.BindingFlags.Instance);
+            if (atTargetLocationField == null || t == null)
+                return false;
 
-            return (bool)field.GetValue(t);
+            return (bool)atTargetLocationField.GetValue(t);
         }
     }
 }
