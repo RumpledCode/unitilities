@@ -68,19 +68,9 @@ namespace Unitilities
             this.gridSize = gridSize;
         }
 
-        public void StartSnapping()
+        public void SetSnapping(bool value)
         {
-            snap = true;
-        }
-
-        public void StopSnapping()
-        {
-            snap = false;
-        }
-
-        public void ToggleSnapping()
-        {
-            snap = !snap;
+            snap = value;
         }
     }
 }

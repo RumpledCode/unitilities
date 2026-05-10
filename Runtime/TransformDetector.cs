@@ -66,20 +66,9 @@ namespace Unitilities
             }
         }
 
-        public void StartDetecting()
+        public void SetDetecting(bool value)
         {
-            detect = true;
-            frameCount = 0;
-        }
-
-        public void StopDetecting()
-        {
-            detect = false;
-        }
-
-        public void ToggleDetecting()
-        {
-            detect = !detect;
+            detect = value;
             if (detect)
             {
                 frameCount = 0;

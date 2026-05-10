@@ -129,10 +129,5 @@ namespace Unitilities
         {
             shake = false;
         }
-
-        public void ToggleShaking()
-        {
-            shake = !shake;
-        }
     }
 }

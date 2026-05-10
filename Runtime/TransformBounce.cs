@@ -65,17 +65,9 @@ namespace Unitilities
             }
         }
 
-        public void StartBouncing()
+        public void SetBouncing(bool value)
         {
-            bounce = true;
-        }
-        public void StopBouncing()
-        {
-            bounce = false;
-        }
-        public void ToggleBouncing()
-        {
-            bounce = !bounce;
+            bounce = value;
         }
     }
 }

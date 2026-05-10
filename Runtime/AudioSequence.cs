@@ -120,19 +120,19 @@ namespace Unitilities
             }
             CheckTrackEnd();
         }
-    }
 
-    [Serializable]
-    public class AudioSequenceElement
-    {
-        public AudioClip audioClip;
-        [Range(0.0f, 1.0f)]
-        public float volume = 1.0f;
-        [Tooltip("Delay before playback (in seconds).")]
-        public float preDelay;
-        [Tooltip("Called when the audio clip starts playing.")]
-        public UnityEvent onStarted;
-        [Tooltip("Called when the audio clip finishes playing. Does not get invoked when track is changed before it finished playing.")]
-        public UnityEvent onFinished;
+        [Serializable]
+        public class AudioSequenceElement
+        {
+            public AudioClip audioClip;
+            [Range(0.0f, 1.0f)]
+            public float volume = 1.0f;
+            [Tooltip("Delay before playback (in seconds).")]
+            public float preDelay;
+            [Tooltip("Called when the audio clip starts playing.")]
+            public UnityEvent onStarted;
+            [Tooltip("Called when the audio clip finishes playing. Does not get invoked when track is changed before it finished playing.")]
+            public UnityEvent onFinished;
+        }
     }
 }

@@ -66,25 +66,14 @@ namespace Unitilities
             this.offset = offset;
         }
 
-        public void StartFollowing()
+        public void SetFollowing(bool value)
         {
-            follow = true;
-        }
-
-        public void StopFollowing()
-        {
-            follow = false;
-        }
-
-        public void ToggleFollowing()
-        {
-            follow = !follow;
+            follow = value;
         }
 
         public bool IsAtTargetLocation()
         {
             return atTargetLocation;
         }
-
     }
 }

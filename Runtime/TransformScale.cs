@@ -48,19 +48,10 @@ namespace Unitilities
             transform.localScale = Vector3.Lerp(startScale, endScale, t);
         }
 
-        public void StartScaling()
+        public void SetScaling(bool value)
         {
-            scale = true;
+            scale = value;
         }
 
-        public void StopScaling()
-        {
-            scale = false;
-        }
-
-        public void ToggleScaling()
-        {
-            scale = !scale;
-        }
     }
 }

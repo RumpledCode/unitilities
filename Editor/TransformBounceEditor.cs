@@ -9,7 +9,7 @@ namespace Unitilities
         public override void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox(
-                "Bounces the transfrom (ping-pong) from it's current position to the target position.",
+                "Bounces the transfrom (ping-pong) from it's current (starting) position to the target position.",
                 MessageType.Info);
 
             DrawDefaultInspector();

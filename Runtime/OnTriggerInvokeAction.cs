@@ -29,6 +29,45 @@ namespace Unitilities
         public UnityEvent onStay;
         public UnityEvent onExit;
 
+        private void OnTriggerEnter(Collider collider)
+        {
+            if (!checkOnEnter)
+            {
+                return;
+            }
+
+            if (IsTriggerValid(collider))
+            {
+                onEnter?.Invoke();
+            }
+        }
+
+        private void OnTriggerExit(Collider collider)
+        {
+
+            if (!checkOnExit)
+            {
+                return;
+            }
+            if (IsTriggerValid(collider))
+            {
+                onExit?.Invoke();
+            }
+        }
+
+        private void OnTriggerStay(Collider collider)
+        {
+            if (!checkOnStay)
+            {
+                return;
+            }
+
+            if (IsTriggerValid(collider))
+            {
+                onStay?.Invoke();
+            }
+        }
+
         private bool IsTriggerValid(Collider collider)
         {
             if (checkTag && !collider.CompareTag(tagValue))
@@ -77,70 +116,6 @@ namespace Unitilities
         public void SetTagValue(string value)
         {
             tagValue = value;
-        }
-
-        public void ToggleCheckOnEnter()
-        {
-            checkOnEnter = !checkOnEnter;
-        }
-
-        public void ToggleCheckOnExit()
-        {
-            checkOnExit = !checkOnExit;
-        }
-
-        public void ToggleCheckOnStay()
-        {
-            checkOnStay = !checkOnStay;
-        }
-
-        public void ToggleCheckName()
-        {
-            checkName = !checkName;
-        }
-
-        public void ToggleCheckTag()
-        {
-            checkTag = !checkTag;
-        }
-
-        private void OnTriggerEnter(Collider collider)
-        {
-            if (!checkOnEnter)
-            {
-                return;
-            }
-
-            if (IsTriggerValid(collider))
-            {
-                onEnter?.Invoke();
-            }
-        }
-
-        private void OnTriggerExit(Collider collider)
-        {
-
-            if (!checkOnExit)
-            {
-                return;
-            }
-            if (IsTriggerValid(collider))
-            {
-                onExit?.Invoke();
-            }
-        }
-
-        private void OnTriggerStay(Collider collider)
-        {
-            if (!checkOnStay)
-            {
-                return;
-            }
-
-            if (IsTriggerValid(collider))
-            {
-                onStay?.Invoke();
-            }
         }
     }
 }

@@ -57,9 +57,9 @@ namespace Unitilities
             this.target = target;
         }
 
-        public void StartLookingAt()
+        public void SetLooking(bool value)
         {
-            lookAt = true;
+            lookAt = value;
         }
 
         public void StopLookingAt()

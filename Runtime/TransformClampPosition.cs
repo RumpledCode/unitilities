@@ -107,19 +107,9 @@ namespace Unitilities
             this.clampZ = clampZ;
         }
 
-        public void StartClamping()
+        public void SetClamping(bool value)
         {
-            clamp = true;
-        }
-
-        public void StopClamping()
-        {
-            clamp = false;
-        }
-
-        public void ToggleClamping()
-        {
-            clamp = !clamp;
+            clamp = value;
         }
     }
 }

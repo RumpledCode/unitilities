@@ -32,20 +32,9 @@ namespace Unitilities
             );
         }
 
-        public void StartRotating()
+        public void SetRotating(bool value)
         {
-            rotate = true;
+            rotate = value;
         }
-
-        public void StopRotating()
-        {
-            rotate = false;
-        }
-
-        public void ToggleRotation()
-        {
-            rotate = !rotate;
-        }
-
     }
 }
