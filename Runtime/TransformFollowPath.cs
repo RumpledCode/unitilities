@@ -12,6 +12,7 @@ namespace Unitilities
         public RepeatMode repeatMode;
         public float speed = 4;
         public List<PathStop> stops;
+        public bool skipFirst;
 
         [Tooltip("Anything under this distance will be considered as having arrived at the target's position.")]
         public float distanceThreshold = 0.001f;
@@ -26,7 +27,7 @@ namespace Unitilities
 
         void Start()
         {
-            SetStop(0);
+            SetStop(skipFirst ? 1 : 0);
         }
 
         void Update()
@@ -75,7 +76,7 @@ namespace Unitilities
             {
                 if (repeatMode == RepeatMode.Reverese)
                 {
-                    stops.Reverse(0, stops.Count - 1);
+                    stops.Reverse();
                 }
                 index = 0;
             }

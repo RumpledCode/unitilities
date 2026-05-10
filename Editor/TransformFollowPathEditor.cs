@@ -60,7 +60,7 @@ namespace Unitilities
             GetTimeWaited(transformFollowPath));
             EditorGUILayout.Space();
             PathStop lastStop = GetLastStop(transformFollowPath);
-            EditorGUILayout.LabelField("Current sequence element", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Last Stop", EditorStyles.boldLabel);
             if (lastStop != null)
             {
                 EditorGUILayout.ObjectField(
@@ -79,7 +79,7 @@ namespace Unitilities
             }
 
             PathStop targetStop = GetTargetStop(transformFollowPath);
-            EditorGUILayout.LabelField("Current sequence element", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Target Stop", EditorStyles.boldLabel);
             if (targetStop != null)
             {
                 EditorGUILayout.ObjectField(
