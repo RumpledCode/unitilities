@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace Unitilities
 {
-    public class TransformDetector : MonoBehaviour
+    public class TransformChangeDetector : MonoBehaviour
     {
         [Header("Settings")]
         public int frameDelay;

@@ -2,9 +2,9 @@ using UnityEditor;
 
 namespace Unitilities
 {
-    [CustomEditor(typeof(TransformDetector))]
+    [CustomEditor(typeof(TransformChangeDetector))]
     [CanEditMultipleObjects]
-    public class TransformDetectorEditor : Editor
+    public class TransformChangeDetectorEditor : Editor
     {
         public override void OnInspectorGUI()
         {
