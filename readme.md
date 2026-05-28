@@ -31,6 +31,4 @@ Contributions, improvements, and suggestions are welcome.
 📧 Email: [andromikulic@gmail.com](mailto:andromikulic@gmail.com)
 🌐 Website: https://rumpledcode.com/
 
----
-
 Built to save people time.
