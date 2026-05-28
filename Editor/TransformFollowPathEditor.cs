@@ -1,7 +1,6 @@
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
-using static Unitilities.TransformFollowPath;
 
 namespace Unitilities
 {
@@ -59,7 +58,7 @@ namespace Unitilities
             new GUIContent("Time Waited", "Time waited at the last stop."),
             GetTimeWaited(transformFollowPath));
             EditorGUILayout.Space();
-            PathStop lastStop = GetLastStop(transformFollowPath);
+            TransformFollowPath.PathStop lastStop = GetLastStop(transformFollowPath);
             EditorGUILayout.LabelField("Last Stop", EditorStyles.boldLabel);
             if (lastStop != null)
             {
@@ -78,7 +77,7 @@ namespace Unitilities
                 EditorGUILayout.LabelField("No last stop");
             }
 
-            PathStop targetStop = GetTargetStop(transformFollowPath);
+            TransformFollowPath.PathStop targetStop = GetTargetStop(transformFollowPath);
             EditorGUILayout.LabelField("Target Stop", EditorStyles.boldLabel);
             if (targetStop != null)
             {
@@ -115,14 +114,14 @@ namespace Unitilities
             return (float)timeWaited.GetValue(t);
         }
 
-        PathStop GetLastStop(TransformFollowPath t)
+        TransformFollowPath.PathStop GetLastStop(TransformFollowPath t)
         {
-            return (PathStop)lastStop.GetValue(t);
+            return (TransformFollowPath.PathStop)lastStop.GetValue(t);
         }
 
-        PathStop GetTargetStop(TransformFollowPath t)
+        TransformFollowPath.PathStop GetTargetStop(TransformFollowPath t)
         {
-            return (PathStop)targetStop.GetValue(t);
+            return (TransformFollowPath.PathStop)targetStop.GetValue(t);
         }
     }
 }

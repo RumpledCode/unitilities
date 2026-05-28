@@ -1,7 +1,6 @@
 using UnityEditor;
 using UnityEngine;
 using System.Reflection;
-using static Unitilities.AudioSequence;
 
 namespace Unitilities
 {
@@ -55,7 +54,7 @@ namespace Unitilities
                 new GUIContent("Index", "Current track index."),
                 GetIndex(audioSequence));
             EditorGUILayout.Space();
-            AudioSequenceElement element = GetCurrentElement(audioSequence);
+            AudioSequence.AudioSequenceElement element = GetCurrentElement(audioSequence);
             EditorGUILayout.LabelField("Current sequence element", EditorStyles.boldLabel);
             if (element != null)
             {
@@ -152,9 +151,9 @@ namespace Unitilities
             return (int)indexField.GetValue(t);
         }
 
-        AudioSequenceElement GetCurrentElement(AudioSequence t)
+        AudioSequence.AudioSequenceElement GetCurrentElement(AudioSequence t)
         {
-            return (AudioSequenceElement)currentElementField.GetValue(t);
+            return (AudioSequence.AudioSequenceElement)currentElementField.GetValue(t);
         }
     }
 }
