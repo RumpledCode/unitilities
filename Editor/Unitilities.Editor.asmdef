@@ -1,0 +1,10 @@
+{
+    "name": "Unitilities.Editor",
+    "rootNamespace": "Unitilities",
+    "references": [
+        "Unitilities"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}
