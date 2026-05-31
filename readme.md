@@ -33,8 +33,3 @@ Contributions, improvements, and suggestions are welcome.
 * YouTube: RumpledCode — https://www.youtube.com/c/rumpledcode
 
 Built to save people time.
-
-
-
-
-Built to save people time.
