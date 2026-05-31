@@ -4,10 +4,10 @@ This repository exists to centralize useful Unity scripts that can be shared acr
 Whether it's utility extensions, helper methods, gameplay systems, editor tooling, or quality-of-life improvements - if it saves time and is reusable, it belongs here.
 
 ## Features
-- 🧩 Reusable Unity utility scripts
-- ⚡ Designed for rapid integration into new and existing projects
-- 🛠 Common gameplay, editor, and helper functionality
-- 📦 Modular and project-friendly structure
+- Reusable Unity utility scripts
+- Designed for rapid integration into new and existing projects
+- Common gameplay, editor, and helper functionality
+- Modular and project-friendly structure
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ Contributions, improvements, and suggestions are welcome.
 
 * Email: [andromikulic@gmail.com](mailto:andromikulic@gmail.com)
 * Website: https://rumpledcode.com/
-* YouTube: RumpledCode — https://www.youtube.com/@rumpledcode
+* YouTube: RumpledCode — https://www.youtube.com/c/rumpledcode
 
 Built to save people time.
 
