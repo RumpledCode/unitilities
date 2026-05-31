@@ -28,7 +28,13 @@ Contributions, improvements, and suggestions are welcome.
 
 ## Contact
 
-📧 Email: [andromikulic@gmail.com](mailto:andromikulic@gmail.com)
-🌐 Website: https://rumpledcode.com/
+* Email: [andromikulic@gmail.com](mailto:andromikulic@gmail.com)
+* Website: https://rumpledcode.com/
+* YouTube: RumpledCode — https://www.youtube.com/@rumpledcode
+
+Built to save people time.
+
+
+
 
 Built to save people time.
