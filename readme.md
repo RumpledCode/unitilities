@@ -9,6 +9,7 @@ Whether it's utility extensions, helper methods, gameplay systems, editor toolin
 - Common gameplay, editor, and helper functionality
 - Modular and project-friendly structure
 
+## Utilities Index
 [View the wiki for a full list of components and their descriptions.](https://github.com/RumpledCode/unitilities/wiki/Utilities-Index)
 
 ## Getting Started
@@ -24,8 +25,6 @@ Whether it's utility extensions, helper methods, gameplay systems, editor toolin
 ### Option 2 — Manual Import
 - Clone or download this repository
 - Copy the desired scripts directly into your Unity project's `Assets/` folder
-
-## Utilities Index
 
 ## Contributing
 Contributions, improvements, and suggestions are welcome.
