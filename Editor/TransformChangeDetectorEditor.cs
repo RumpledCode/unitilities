@@ -9,7 +9,7 @@ namespace Unitilities
         public override void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox(
-                "Invokes a Unity event when the attached Transform moves, rotates or scales. Processed in LateUpdate().",
+                "Invokes a Unity Event when the attached Transform moves, rotates or scales. Processed in LateUpdate().",
                 MessageType.Info);
 
             DrawDefaultInspector();

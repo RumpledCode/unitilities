@@ -26,7 +26,7 @@ namespace Unitilities
                 followTarget = (TransformSmoothFollow)target;
 
             EditorGUILayout.HelpBox(
-                "Smoothly follows a given transform.",
+                "Smoothly follows a given transform. Optional offset.",
                 MessageType.Info);
 
             DrawDefaultInspector();
