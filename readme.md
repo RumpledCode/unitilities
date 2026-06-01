@@ -16,7 +16,7 @@ Whether it's utility extensions, helper methods, gameplay systems, editor toolin
 - Click the **+** button and select **"Add package from git URL..."**
 - Paste the repository URL:
    ```
-   https://github.com/AndroMikulic/unitilities.git
+   https://github.com/RumpledCode/unitilities.git
    ```
  
 ### Option 2 — Manual Import
