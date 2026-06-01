@@ -28,7 +28,7 @@ namespace Unitilities
                 {
                     continue;
                 }
-                entries[i].camera.rect = viewports[entries[i].position];
+                SetCameraScreenPosition(entries[i].camera, entries[i].position);
             }
         }
 
