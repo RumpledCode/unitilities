@@ -8,6 +8,7 @@ namespace Unitilities
         public float xRotationSpeed = 0f;
         public float yRotationSpeed = 0f;
         public float zRotationSpeed = 0f;
+        public bool useUnscaledTime = false;
 
         [Header("State")]
         [Tooltip("Is the rotation active")]
@@ -24,10 +25,11 @@ namespace Unitilities
 
         void Rotate()
         {
+            var dt = useUnscaledTime ? Time.deltaTime : Time.unscaledDeltaTime;
             transform.Rotate(
-                xRotationSpeed * Time.deltaTime,
-                yRotationSpeed * Time.deltaTime,
-                zRotationSpeed * Time.deltaTime,
+                xRotationSpeed * dt,
+                yRotationSpeed * dt,
+                zRotationSpeed * dt,
                 Space.Self
             );
         }
