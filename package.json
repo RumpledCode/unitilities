@@ -1,6 +1,6 @@
 {
     "name": "com.rumpledcode.unitilities",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Unitilities",
     "description": "A collection of various Unity utility scripts.",
     "unity": "2022.3",
