@@ -25,7 +25,7 @@ namespace Unitilities
 
         void Rotate()
         {
-            var dt = useUnscaledTime ? Time.unscaledDeltaTime : Time.DeltaTime;
+            var dt = useUnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
             transform.Rotate(
                 xRotationSpeed * dt,
                 yRotationSpeed * dt,
